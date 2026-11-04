@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aniversário do João - 10 anos!</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #07152e;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(circle at 10% 10%, #e21b2d 0, transparent 30%),
+      radial-gradient(circle at 90% 90%, #064b9b 0, transparent 35%);
+    opacity: .55;
+    z-index: -2;
+}
+
+.web {
+    position: fixed;
+    color: rgba(255,255,255,.08);
+    font-size: 180px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.web.one {
+    top: -50px;
+    left: -30px;
+}
+
+.web.two {
+    bottom: -50px;
+    right: -30px;
+}
+
+.container {
+    width: 100%;
+    max-width: 560px;
+    margin: auto;
+    padding: 25px 18px 40px;
+}
+
+.hero {
+    text-align: center;
+    padding: 25px 10px;
+}
+
+.logo {
+    width: 95px;
+    height: 95px;
+    margin: auto;
+    background: #e21b2d;
+    border: 5px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    box-shadow: 0 0 25px rgba(255,0,0,.5);
+}
+
+.hero h1 {
+    font-family: 'Bangers', cursive;
+    font-size: clamp(48px, 12vw, 70px);
+    letter-spacing: 3px;
+    color: #fff;
+    text-shadow: 4px 4px #e21b2d;
+    margin-top: 15px;
+}
+
+.hero h2 {
+    font-size: 21px;
+    color: #ffdb35;
+    margin-top: 5px;
+}
+
+.hero p {
+    font-size: 14px;
+    margin-top: 12px;
+    color: #dce9ff;
+}
+
+.card {
+    background: rgba(255,255,255,.97);
+    color: #14213d;
+    padding: 28px 23px;
+    border-radius: 22px;
+    border-top: 7px solid #e21b2d;
+    box-shadow: 0 15px 45px rgba(0,0,0,.35);
+}
+
+.card h3 {
+    font-family: 'Bangers', cursive;
+    text-align: center;
+    font-size: 32px;
+    color: #e21b2d;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin: 17px 0 7px;
+}
+
+input, select {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #dce3ed;
+    border-radius: 11px;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+    background: white;
+    color: #14213d;
+}
+
+input:focus, select:focus {
+    border-color: #e21b2d;
+    box-shadow: 0 0 0 3px rgba(226,27,45,.1);
+}
+
+button {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    background: #e21b2d;
+    color: white;
+    padding: 16px;
+    margin-top: 25px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: .2s;
+    box-shadow: 0 5px 0 #a70e1c;
+}
+
+button:hover {
+    background: #bd1424;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+.notice {
+    text-align: center;
+    color: #64748b;
+    font-size: 11px;
+    margin-top: 17px;
+    line-height: 1.6;
+}
+
+.footer {
+    text-align: center;
+    padding: 25px 5px 0;
+    font-size: 12px;
+    color: #cbd5e1;
+}
+
+.footer strong {
+    color: #ffdb35;
+}
+
+@media(max-width: 400px) {
+    .card {
+        padding: 23px 17px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="web one">🕸</div>
+<div class="web two">🕸</div>
+
+<main class="container">
+
+    <header class="hero">
+        <div class="logo">🕷️</div>
+
+        <h1>JOÃO 10 ANOS!</h1>
+
+        <h2>Uma aventura incrível espera por você!</h2>
+
+        <p>
+            Você foi convocado para uma missão especial:
+            comemorar os 10 anos do João!
+        </p>
+    </header>
+
+    <section class="card">
+
+        <h3>CONFIRME SUA PRESENÇA!</h3>
+
+        <p class="subtitle">
+            Preencha os dados abaixo para confirmar sua participação.
+        </p>
+
+        <form id="confirmacao">
+
+            <label for="nome">Nome do convidado</label>
+            <input
+                type="text"
+                id="nome"
+                placeholder="Digite seu nome completo"
+                required
+            >
+
+            <label for="pronome">Pronome do convidado</label>
+            <select id="pronome" required>
+                <option value="">Selecione</option>
+                <option value="Ele">Ele</option>
+                <option value="Ela">Ela</option>
+                <option value="Outro">Outro</option>
+                <option value="Prefiro não informar">Prefiro não informar</option>
+            </select>
+
+            <label for="quantidade">Quantidade de pessoas</label>
+            <select id="quantidade" required>
+                <option value="">Selecione a quantidade</option>
+                <option value="1">1 pessoa</option>
+                <option value="2">2 pessoas</option>
+                <option value="3">3 pessoas</option>
+                <option value="4">4 pessoas</option>
+                <option value="5">5 pessoas</option>
+                <option value="6">6 pessoas</option>
+            </select>
+
+            <label for="codigo">Código do convite</label>
+            <input
+                type="text"
+                id="codigo"
+                placeholder="Ex: JOAO010"
+                required
+            >
+
+            <button type="submit">
+                🕷️ CONFIRMAR PELO WHATSAPP
+            </button>
+
+        </form>
+
+        <p class="notice">
+            Sua confirmação será enviada diretamente pelo WhatsApp
+            dos responsáveis pela festa.
+        </p>
+
+    </section>
+
+    <footer class="footer">
+        <strong>JOÃO 10 ANOS</strong><br>
+        Grandes aventuras começam com grandes amigos! 🕸️
+    </footer>
+
+</main>
+
+<script>
+
+// ======================================
+// CONFIGURAÇÃO DO WHATSAPP
+// ======================================
+
+// Coloque abaixo o número dos responsáveis.
+// Utilize DDI + DDD + número, somente números.
+// Exemplo: 5531999999999
+
+const telefoneWhatsApp = "5531999999999";
+
+document.getElementById("confirmacao").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    const nome = document.getElementById("nome").value.trim();
+    const pronome = document.getElementById("pronome").value;
+    const quantidade = document.getElementById("quantidade").value;
+    const codigo = document.getElementById("codigo").value.trim();
+
+    if (!nome || !pronome || !quantidade || !codigo) {
+        alert("Preencha todos os campos!");
+        return;
+    }
+
+    const mensagem =
+`🕷️ *CONFIRMAÇÃO DE PRESENÇA - JOÃO 10 ANOS!* 🎉
+
+Olá! Estou confirmando minha presença na festa!
+
+👤 Nome: ${nome}
+🗣️ Pronome: ${pronome}
+👥 Quantidade de pessoas: ${quantidade}
+🎟️ Código do convite: ${codigo}
+
+🕸️ Estamos prontos para essa aventura!`;
+
+    const link = "https://wa.me/" + telefoneWhatsApp +
+                 "?text=" + encodeURIComponent(mensagem);
+
+    window.open(link, "_blank");
+
+});
+
+</script>
+
+</body>
+</html>
